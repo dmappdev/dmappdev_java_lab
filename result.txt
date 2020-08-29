@@ -1,0 +1,21 @@
+"I understand everything about the buffer, but what's this count variable?"
+
+"When we read the latest block of data from a file, we may get, say, 328 bytes instead of 1000. So when we write the data, we need to indicate that we're not writing the entire block—only the first 328 bytes."
+
+When we read the last block, the read method will return the number of bytes actually read. 1000 every time we read a block, except for the last block, when we get 328.
+
+So when we write a block, we indicate that not all of the bytes in the buffer should be written, just 328 (i.e. the value stored in the count variable).
+
+"Now it's all clear. Thanks, Ellie."
+"We'll start with streams for file input/output. But first things first."
+
+There are two classes for reading and writing files: FileInputStream and FileOutputStream. As you probably already guessed, FileInputStream can sequentially read bytes from a file, and FileOutputStream can sequentially write bytes to a file. Here are the methods that these classes have:
+You can't write data to the stream any longer, and flush is called automatically.
+
+"That's it?"
+
+"Yep, there's actually only one method for writing: write(). It writes only one byte at a time. But it lets you write as much information as you want to the file."
+
+Programming is a process of dividing one large and complex task into many small ones. Essentially the same process is happening here: reading and writing large blocks of data is broken into reading and writing in bite-sized pieces—one byte at a time.
+
+Here's how you can use these classes to copy a file on disk:
