@@ -1,10 +1,7 @@
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 
-public class InputStreamTest {
+public class SystemInWrapper {
+
     public static void main(String[] args) throws IOException
     {
         //Put data into a string
@@ -38,4 +35,5 @@ public class InputStreamTest {
         reader.close();
         isr.close();
     }
+
 }

@@ -1,4 +1,6 @@
+import java.text.DateFormat;
 import java.text.DateFormatSymbols;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -20,6 +22,10 @@ public class CalendarDateTest {
         for (String m: dateFormatSymbols.getMonths()) {
             System.out.println(m);
         }
-        System.out.println();
+        Calendar calendar = Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("MMM d yyyy");
+        Date date1 = calendar.getTime();
+        dateFormat.format(date1);
+        System.out.println(dateFormat.format(date1));
     }
 }
