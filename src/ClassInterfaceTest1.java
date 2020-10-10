@@ -5,7 +5,7 @@ public class ClassInterfaceTest1 implements ClassInterfaceHolder.InterfaceHolder
         ClassInterfaceTest1 test1 = new ClassInterfaceTest1();
         System.out.println(test1.getMessage());
         ClassInterfaceHolder cl1 = new ClassInterfaceHolder(test1);
-        cl1.getMsg();
+        System.out.println(cl1.getMsg());
         ClassInterfaceHolder.InterfaceHolder interfaceHolder = new ClassInterfaceTest1();
         System.out.println(interfaceHolder.toString());
         interfaceHolder.getMessage();
